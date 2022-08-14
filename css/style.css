@@ -1,0 +1,165 @@
+@font-face {
+    font-family: "Karla";
+    src: url("../assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
+    width: 640px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    overflow: hidden;
+}
+
+.top {
+    grid-row: 1;
+    grid-column: span 2;
+    padding: 2.5em;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(218, 22%, 67%);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 1;
+    padding: 2.5em;
+    background-color: #59B1B0;
+}
+
+.right {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 2.5em;
+    background-color: #6BBCBC;
+}
+
+.top > .section-title {
+    margin: 0 0 1em 0;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: hsl(179, 62%, 43%);
+}
+
+.left > .section-title, .right > .section-title {
+    margin: 0 0 1em 0;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: hsl(0, 0%, 100%);
+}
+
+.top > .section-subtitle {
+    font-size: 1.1em;
+    color: #C5DE55;
+}
+
+.top > .section-content {
+    margin: 0;
+}
+
+.left > .section-content, .right > .section-content {
+    margin: 0;
+    font-size: 0.9em;
+    color: hsl(204, 43%, 93%);
+}
+
+.left > .section-content {
+    flex: 1;
+    font-size: 1em;
+}
+
+.right > .section-content {
+    line-height: 1.4em;
+}
+
+.left .section-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3em;
+    color: #8EDBD7;
+}
+
+.left .section-price > strong {
+    margin-right: 10px;
+    font-size: 2em;
+    color: hsl(0, 0%, 100%);
+}
+
+.left > .section-link {
+    display: block;
+    margin-top: 1.5em;
+    padding: 1em 0;
+    width: 100%;
+    background-color: #C5DE55;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        width: 330px;
+    }
+
+    .top {
+        grid-row: 1;
+        grid-column: 1;
+        padding: 1.6em 1.6em 2em 1.6em;
+    }
+    
+    .left {
+        grid-row: 2;
+        grid-column: 1;
+        padding: 1.6em;
+    }
+    
+    .right {
+        grid-row: 3;
+        grid-column: 1;
+        padding: 1.6em 1.6em 2em 1.6em;
+    }
+    
+    .top > .section-title {
+        font-size: 1.3em;
+    }
+    
+    .top > .section-subtitle {
+        margin: 1.5em 0;
+        font-size: 1em;
+    }
+    
+    .top > .section-content {
+        font-size: 0.9em;
+        line-height: 1.7em;
+    }
+    
+    .right > .section-content {
+        font-size: 0.9em;
+        line-height: 1.4em;
+    }
+}
